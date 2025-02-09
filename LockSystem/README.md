@@ -14,4 +14,3 @@ LockSystem is a simple security system based on Arduino that uses sequential cod
 ### Software
 - IDE: Arduino IDE
 ## Connection
-![Connection Diagram](https://github.com/kolszewska16/ArduinoProjects/blob/b8c19ec5bd4215dcfc81e4086ae860be010097fb/LockSystem/connection.png)
