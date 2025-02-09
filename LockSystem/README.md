@@ -1,5 +1,5 @@
 # LockSystem
-LockSystem is a simple security system based on Arduino that uses sequential code entry via push-buttons.
+LockSystem is a simple security system based on Arduino that uses sequential code entry via push-buttons. After 3 unsuccessful attempts to enter the password the system locks for 10s.
 ## Components
 ### Hardware
 - Arduino UNO
@@ -14,3 +14,4 @@ LockSystem is a simple security system based on Arduino that uses sequential cod
 ### Software
 - IDE: Arduino IDE
 ## Connection
+![Connection Diagram](https://github.com/kolszewska16/ArduinoProjects/blob/dd9ebc314ef1faa8137eba6d4265eae218898118/LockSystem/connection.png)
