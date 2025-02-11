@@ -6,8 +6,8 @@
   - 330Ω (3x)
   - 10kΩ (1x)
 - Photoresistor (LDR)
+- Potentiometer
 - RGB diode with common cathode
-- Passive Piezo-Buzzer (HPM14AX)
 ### Software
 - IDE: Arduino IDE
 ## Connection
