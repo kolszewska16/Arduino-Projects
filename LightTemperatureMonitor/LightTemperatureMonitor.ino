@@ -9,6 +9,7 @@ float Temperature(int value){
   float temp= ((value* 5.0)/ 1024.0)* 100;
   return temp;
 }
+
 void setup() {
   pinMode(RED_PIN, OUTPUT);
   pinMode(GREEN_PIN, OUTPUT);
@@ -40,9 +41,6 @@ void loop() {
     analogWrite(RED_PIN, 0);
     analogWrite(GREEN_PIN, 255);
     analogWrite(BLUE_PIN, 0);
-    tone(BUZZER_PIN, 50);
-    delay(1000);
-    noTone(BUZZER_PIN);
   }
   else{
     analogWrite(RED_PIN, 0);
