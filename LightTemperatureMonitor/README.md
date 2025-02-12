@@ -5,7 +5,8 @@
 - Resistors:
   - 330Ω (3x)
   - 10kΩ (1x)
-- Photoresistor (LDR)
+- Photoresistor 5-10kΩ (LDR)
+- Analog Thermometer (LM35)
 - RGB diode with common cathode
 - Passive Piezo-Buzzer (HPM14AX)
 ### Software
