@@ -17,7 +17,7 @@ const int correctSequence[4]= {BUTTON3, BUTTON4, BUTTON2, BUTTON1};
 int inputSequence[4];
 int inputIndex= 0;
 int attempts= 0;
-int lockTime;
+unsigned long lockTime;
 
 int getButton(){
   if(digitalRead(BUTTON1)== LOW){
@@ -51,7 +51,7 @@ bool checkSystem(){
 void unlockedSystem(){
   digitalWrite(GREEN, HIGH);
   digitalWrite(RED, LOW);
-  Serial.println("The system is unlocked");
+  Serial.println("THE SYSTEM IS UNLOCKED");
 }
 
 void lockedSystem(){
@@ -60,7 +60,7 @@ void lockedSystem(){
   tone(BUZZER, 50);
   delay(1000);
   noTone(BUZZER);
-  Serial.println("The system is locked");
+  Serial.println("THE SYSTEM IS LOCKED");
 }
 
 void reset(){
@@ -91,8 +91,10 @@ void loop() {
   if(millis()< lockTime){
     return;
   }
+
   for(int i= 0; i< 4; i++){
     int button= getButton();
+
     if(button!= 1){
       inputSequence[inputIndex]= button;
       inputIndex++;
@@ -113,15 +115,16 @@ void loop() {
       lockedSystem();
       inputIndex= 0;
       attempts++;
-      Serial.print("Number of failed attempts: ");
+      Serial.print("NUMBER OF FAILED ATTEMPTS: ");
       Serial.println(attempts);
       reset();
     }
 
     if(attempts== 3){
       lockTime= millis()+ 10000;
-      Serial.println("The system is locked, try again after 10s");
+      Serial.println("TRY AGAIN AFTER 10s");
       attempts= 0;
+      inputIndex= 0;
     }
   }
 }
